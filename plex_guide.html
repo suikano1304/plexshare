@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLEX 이용 안내서</title>
+    <!-- Chosen Palette: Modern Slate & Amber -->
+    <!-- Application Structure Plan: A single-page, top-down narrative structure. It starts with a hook (What is this?), explains the benefits (Why should I care?), highlights the content (What do I get?), and ends with a clear, step-by-step call to action (How do I start?). This linear flow is ideal for a guide, ensuring users receive all necessary information before being asked to perform actions. -->
+    <!-- Visualization & Content Choices: - Introduction/Benefits: Using a card-based grid layout with Unicode icons instead of a list makes the benefits more visually distinct and easier to digest. (Goal: Inform/Compare, Method: HTML/Tailwind Grid). - Library Stats: Presented as large, bold text to create impact without a complex chart. (Goal: Inform, Method: HTML/Tailwind Typography). - Getting Started Guide: A numbered, step-by-step format breaks down the process into manageable chunks, reducing user friction. (Goal: Guide/Organize, Method: HTML/Tailwind). - Interaction: A 'Copy ID' button will be added using JavaScript to make it easy for users to contact the admin. This is a practical, user-focused interaction. (Goal: Action, Method: JS). - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .accent-color { color: #e5a00d; }
+        .bg-accent-color { background-color: #e5a00d; }
+        .border-accent-color { border-color: #e5a00d; }
+        .step-circle {
+            width: 50px;
+            height: 50px;
+        }
+        .icon-style {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        /* Style for links that look like buttons */
+        .btn-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">📺 PLEX 라이브러리 공유 안내</h1>
+            <p class="text-lg md:text-xl text-gray-600">길드원 여러분을 위한 개인 미디어 서버에 오신 것을 환영합니다.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- What is PLEX? Section -->
+            <section id="what-is-plex" class="mb-16">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h2 class="text-3xl font-bold mb-4">PLEX란 무엇인가요?</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        PLEX는 여러분의 개인 미디어 라이브러리를 효율적으로 관리하고 스트리밍할 수 있게 해주는 강력한 서비스입니다. 제가 관리하는 서버에 저장된 수많은 영화, 드라마, 애니메이션 등을 여러분의 다양한 기기에서 언제 어디서든 즐길 수 있습니다.
+                    </p>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="font-semibold text-lg mb-2">방대한 콘텐츠 라이브러리</h3>
+                        <p class="text-gray-600">
+                            현재 저희 라이브러리에는 수천, 수만 개의 콘텐츠가 포함되어 있으며, 넷플릭스, 지상파, 케이블 등에서 방영되는 대부분의 최신 콘텐츠가 빠르게 업데이트됩니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section id="benefits" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8">PLEX 활용의 주요 이점</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center">
+                        <div class="icon-style mr-5 accent-color">🌍</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-1">원격 미디어 접근성</h3>
+                            <p class="text-gray-600">외부에서도 스마트폰 등으로 서버에 접속하여 미디어를 자유롭게 시청하거나 청취할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center">
+                        <div class="icon-style mr-5 accent-color">📚</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-1">체계적인 라이브러리 관리</h3>
+                            <p class="text-gray-600">포스터, 줄거리, 출연진 정보 등을 자동으로 정리하여 보기 좋게 제공합니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center">
+                        <div class="icon-style mr-5 accent-color">💻</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-1">광범위한 기기 호환성</h3>
+                            <p class="text-gray-600">PC, 스마트폰, 태블릿, 스마트 TV 등 대부분의 기기에서 PLEX 앱을 지원합니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center">
+                        <div class="icon-style mr-5 accent-color">🤝</div>
+                        <div>
+                            <h3 class="font-semibold text-xl mb-1">간편한 라이브러리 공유</h3>
+                            <p class="text-gray-600">서버 관리자인 제가 길드원 여러분의 계정에 라이브러리를 손쉽게 공유해 드릴 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Getting Started Section -->
+            <section id="getting-started">
+                <h2 class="text-3xl font-bold text-center mb-8">시작하기: 3단계 가이드</h2>
+                <div class="space-y-8">
+                    <!-- Step 1: Download -->
+                    <div class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center">
+                        <div class="step-circle bg-accent-color text-white text-2xl font-bold flex items-center justify-center rounded-full mb-4 md:mb-0 md:mr-8 flex-shrink-0">1</div>
+                        <div class="text-center md:text-left">
+                            <h3 class="font-semibold text-2xl mb-2">애플리케이션 다운로드</h3>
+                            <p class="text-gray-600 mb-4">사용하시는 기기에 맞는 PLEX 앱을 설치해주세요. 각 플랫폼의 공식 스토어에서 쉽게 다운로드할 수 있습니다.</p>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                                <!-- Updated PC (Microsoft Store) link -->
+                                <a href="https://apps.microsoft.com/detail/xp9cdqw6ml4nqn" target="_blank" class="btn-link bg-gray-800 text-white hover:bg-gray-700">PC (Microsoft Store)</a>
+                                <a href="https://apps.apple.com/app/plex-stream-movies-tv/id383457673" target="_blank" class="btn-link bg-blue-600 text-white hover:bg-blue-500">iPhone / iPad (App Store)</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.plexapp.android" target="_blank" class="btn-link bg-green-600 text-white hover:bg-green-500">Android (Google Play)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Sign Up -->
+                    <div class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center">
+                        <div class="step-circle bg-accent-color text-white text-2xl font-bold flex items-center justify-center rounded-full mb-4 md:mb-0 md:mr-8 flex-shrink-0">2</div>
+                        <div class="text-center md:text-left">
+                            <h3 class="font-semibold text-2xl mb-2">PLEX 계정 생성 (VPN 사용)</h3>
+                            <p class="text-gray-600">현재 PLEX 가입 시 접속 문제가 있을 수 있습니다. 원활한 가입을 위해 <strong class="text-red-600">VPN을 '미국(USA)'으로 설정</strong>한 후 계정을 생성해주세요.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Share ID -->
+                    <div class="bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-center">
+                        <div class="step-circle bg-accent-color text-white text-2xl font-bold flex items-center justify-center rounded-full mb-4 md:mb-0 md:mr-8 flex-shrink-0">3</div>
+                        <div class="text-center md:text-left">
+                            <h3 class="font-semibold text-2xl mb-2">PLEX 아이디 공유</h3>
+                            <p class="text-gray-600 mb-4">계정 생성이 완료되면, 라이브러리 접근 권한을 설정할 수 있도록 생성하신 PLEX 아이디(이메일 또는 사용자 이름)를 저에게 알려주세요.</p>
+                            <div class="flex items-center justify-center md:justify-start bg-gray-100 p-3 rounded-lg">
+                                <span id="adminId" class="text-gray-800 mr-4">suikano</span>
+                                <button id="copyBtn" class="bg-accent-color text-white px-4 py-1 rounded-lg hover:opacity-80 transition text-sm">복사</button>
+                            </div>
+                            <div id="copy-message" class="text-green-600 text-sm mt-2 h-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-10 mt-16 text-gray-500">
+            <p>궁금한 점이 있다면 언제든지 문의해주세요.</p>
+        </footer>
+    </div>
+
+    <script>
+        const copyBtn = document.getElementById('copyBtn');
+        const adminId = document.getElementById('adminId').innerText;
+        const copyMessage = document.getElementById('copy-message');
+
+        copyBtn.addEventListener('click', () => {
+            const textarea = document.createElement('textarea');
+            textarea.value = adminId;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                copyMessage.textContent = '복사되었습니다!';
+            } catch (err) {
+                copyMessage.textContent = '복사에 실패했습니다.';
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            document.body.removeChild(textarea);
+
+            setTimeout(() => {
+                copyMessage.textContent = '';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
