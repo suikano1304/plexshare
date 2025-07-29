@@ -59,10 +59,25 @@
                     </p>
                     <div class="bg-gray-100 p-6 rounded-lg">
                         <h3 class="font-semibold text-lg mb-2">방대한 콘텐츠 라이브러리</h3>
-                        <p class="text-gray-600">
-                            현재 저희 라이브러리에는 수천, 수만 개의 콘텐츠가 포함되어 있으며, 넷플릭스, 지상파, 케이블 등에서 방영되는 대부분의 최신 콘텐츠가 빠르게 업데이트됩니다.
+                        <p class="text-gray-600 mb-4">
+                            현재 저희 라이브러리에는 수만 개의 영화, 드라마, 예능, 애니메이션 등 콘텐츠가 포함되어 있으며, 넷플릭스, 지상파, 케이블 등에서 방영되는 대부분의 최신 콘텐츠가 빠르게 업데이트됩니다.
                         </p>
+                        <!-- Updated image of Plex library with the latest working Discord attachment URL -->
+                        <img src="https://cdn.discordapp.com/attachments/1399571982877720636/1399585518626410537/sample.png?ex=68898916&is=68883796&hm=5b1f74bc2dbf17a9768509b895d526437528c9dc227a41957ce8fa3d8bd2c856&" alt="Plex 라이브러리 스크린샷" class="rounded-lg shadow-md mx-auto w-full h-auto object-cover mt-4" onerror="this.onerror=null;this.src='https://placehold.co/600x337/cccccc/333333?text=Plex+Library+Screenshot+Fallback';">
                     </div>
+                </div>
+            </section>
+
+            <!-- Important Notice Section -->
+            <section id="important-notice" class="mb-16">
+                <div class="bg-red-50 border border-red-200 p-6 rounded-xl shadow-md text-center">
+                    <h2 class="text-xl font-bold text-red-700 mb-3">⚠️ 중요 안내: 라이브러리 공유 정책</h2>
+                    <p class="text-base text-red-800 leading-normal">
+                        본 PLEX 라이브러리는 "길드원에게만 공유"되는 전용 서비스입니다.<br>
+                        라이브러리 접근 권한은 "길드원 자격이 유지될 때까지만 유효"합니다.<br>
+                        따라서, 부여받은 라이브러리 접근 권한을 "타인에게 공유하는 것은 엄격히 금지"됩니다.<br>
+                        이를 어길 시 즉시 공유는 중지 됩니다.
+                    </p>
                 </div>
             </section>
 
@@ -102,7 +117,7 @@
             </section>
 
             <!-- Getting Started Section -->
-            <section id="getting-started">
+            <section id="getting-started" class="mb-16">
                 <h2 class="text-3xl font-bold text-center mb-8">시작하기: 3단계 가이드</h2>
                 <div class="space-y-8">
                     <!-- Step 1: Download -->
@@ -125,7 +140,13 @@
                         <div class="step-circle bg-accent-color text-white text-2xl font-bold flex items-center justify-center rounded-full mb-4 md:mb-0 md:mr-8 flex-shrink-0">2</div>
                         <div class="text-center md:text-left">
                             <h3 class="font-semibold text-2xl mb-2">PLEX 계정 생성 (VPN 사용)</h3>
-                            <p class="text-gray-600">현재 PLEX 가입 시 접속 문제가 있을 수 있습니다. 원활한 가입을 위해 <strong class="text-red-600">VPN을 '미국(USA)'으로 설정</strong>한 후 계정을 생성해주세요.</p>
+                            <p class="text-gray-600 mb-4">현재 PLEX 가입 시 특정 네트워크 환경에서 접속 문제가 발생할 수 있습니다. 원활한 가입을 위해 VPN(가상 사설망)을 사용하여 네트워크 위치를 변경하는 것이 필요합니다. VPN을 실행한 후, 서버 위치를 '미국(USA)'으로 설정하고 PLEX 가입을 진행해주세요.</p>
+                            <p class="text-gray-600 text-sm mb-4">무료 VPN 서비스 예시:</p>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-4">
+                                <a href="https://protonvpn.com/free-vpn/" target="_blank" class="btn-link bg-gray-700 text-white hover:bg-gray-600 text-sm">Proton VPN (무료 플랜)</a>
+                                <a href="https://windscribe.com/download" target="_blank" class="btn-link bg-gray-700 text-white hover:bg-gray-600 text-sm">Windscribe (무료 플랜)</a>
+                            </div>
+                            <a href="https://www.plex.tv/sign-up/" target="_blank" class="btn-link bg-indigo-600 text-white hover:bg-indigo-700">PLEX 가입 페이지로 이동</a>
                         </div>
                     </div>
 
@@ -134,11 +155,8 @@
                         <div class="step-circle bg-accent-color text-white text-2xl font-bold flex items-center justify-center rounded-full mb-4 md:mb-0 md:mr-8 flex-shrink-0">3</div>
                         <div class="text-center md:text-left">
                             <h3 class="font-semibold text-2xl mb-2">PLEX 아이디 공유</h3>
-                            <p class="text-gray-600 mb-4">계정 생성이 완료되면, 라이브러리 접근 권한을 설정할 수 있도록 생성하신 PLEX 아이디(이메일 또는 사용자 이름)를 저에게 알려주세요.</p>
-                            <div class="flex items-center justify-center md:justify-start bg-gray-100 p-3 rounded-lg">
-                                <span id="adminId" class="text-gray-800 mr-4">suikano</span>
-                                <button id="copyBtn" class="bg-accent-color text-white px-4 py-1 rounded-lg hover:opacity-80 transition text-sm">복사</button>
-                            </div>
+                            <p class="text-gray-600 mb-4">계정 생성이 완료되면, 라이브러리 접근 권한을 설정할 수 있도록 생성하신 PLEX 아이디(이메일 또는 사용자 이름)를 <strong class="text-blue-600">스이카노에게 DM 발송</strong>하여 알려주세요.</p>
+                            <!-- Removed the copy button and related span -->
                             <div id="copy-message" class="text-green-600 text-sm mt-2 h-4"></div>
                         </div>
                     </div>
@@ -153,28 +171,29 @@
     </div>
 
     <script>
-        const copyBtn = document.getElementById('copyBtn');
-        const adminId = document.getElementById('adminId').innerText;
-        const copyMessage = document.getElementById('copy-message');
+        // Removed the copy button functionality as it's no longer needed
+        // const copyBtn = document.getElementById('copyBtn');
+        // const adminId = document.getElementById('adminId').innerText;
+        // const copyMessage = document.getElementById('copy-message');
 
-        copyBtn.addEventListener('click', () => {
-            const textarea = document.createElement('textarea');
-            textarea.value = adminId;
-            document.body.appendChild(textarea);
-            textarea.select();
-            try {
-                document.execCommand('copy');
-                copyMessage.textContent = '복사되었습니다!';
-            } catch (err) {
-                copyMessage.textContent = '복사에 실패했습니다.';
-                console.error('Fallback: Oops, unable to copy', err);
-            }
-            document.body.removeChild(textarea);
+        // copyBtn.addEventListener('click', () => {
+        //     const textarea = document.createElement('textarea');
+        //     textarea.value = adminId;
+        //     document.body.appendChild(textarea);
+        //     textarea.select();
+        //     try {
+        //         document.execCommand('copy');
+        //         copyMessage.textContent = '복사되었습니다!';
+        //     } catch (err) {
+        //         copyMessage.textContent = '복사에 실패했습니다.';
+        //         console.error('Fallback: Oops, unable to copy', err);
+        //     }
+        //     document.body.removeChild(textarea);
 
-            setTimeout(() => {
-                copyMessage.textContent = '';
-            }, 2000);
-        });
+        //     setTimeout(() => {
+        //         copyMessage.textContent = '';
+        //     }, 2000);
+        // });
     </script>
 </body>
 </html>
